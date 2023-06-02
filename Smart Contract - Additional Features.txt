@@ -1,0 +1,13 @@
+﻿Quest Review Functionality
+The quest review functionality was chosen to enhance the interaction between players and the admin. It provides a mechanism for the admin to validate and assess the submissions made by players, ensuring that only legitimate and deserving submissions are approved for rewards. This feature adds an extra layer of accountability and fairness to the quest system.
+
+When a player submits a quest, the admin can review the submission by calling the reviewSubmission function. The admin specifies the submission ID and the approval status (true for approval, false for rejection). If the submission is approved, the quest's status is updated to QuestStatus.APPROVED, indicating that the player successfully completed the quest. This triggers the reward distribution process. If the submission is rejected, the quest's status is set to QuestStatus.REJECTED, and the player is notified accordingly.
+
+Edit and Delete Quests
+The edit and delete quest features were added to provide flexibility and adaptability to the admin in managing quests. It allows the admin to modify existing quests or remove them entirely based on evolving requirements, feedback, or changes in the platform.
+
+The editQuest function enables the admin to update various aspects of a quest, including the title, reward, number of rewards, start time, and end time. This functionality is crucial for correcting errors, adjusting rewards, extending or shortening quest durations, or making any other necessary modifications.
+
+The deleteQuest function allows the admin to remove a quest from the smart contract completely. This feature is useful when a quest needs to be canceled, discontinued, or replaced with a new quest. However, quests can only be deleted if their status is not QuestStatus.CLOSED, ensuring that ongoing quests remain intact.
+
+These additional features provide the admin with more control and flexibility in managing quests, ensuring the integrity and adaptability of the quest system. They contribute to a more robust and user-friendly experience for both players and the admin, promoting fairness, accuracy, and responsiveness within the StackUp platform.
